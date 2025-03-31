@@ -1,0 +1,148 @@
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #0C4B6E00;
+    color: white;
+    padding: 15px 15px;
+}
+
+.nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Asegura que los elementos estén centrados */
+    position: relative; /* Permite posicionar elementos internos */
+    width: 100%;
+}
+
+/* --- Barra de búsqueda centrada --- */
+#searchCity {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#cityInput{
+	width: 425px; /* Aumenta el ancho */
+	height: 22px;
+	border-radius: 20px;  /* Bordes redondeados */
+	border: 1px solid #FFFFFF;
+	padding-left: 10px;
+}
+
+#searchButton{
+	height: 27.5px;
+	border-radius: 20px;  /* Bordes redondeados */
+	border: 1px solid #FFFFFF;
+	background-color: #FFFFFF;
+	cursor: pointer;
+}
+
+/* --- Ubicación alineada a la derecha sin afectar la barra --- */
+#nav-location {
+	
+    position: absolute;
+    right: 15px; /* Lo alinea a la derecha sin afectar el centro */
+    padding-right: 100px;
+    white-space: nowrap;
+}
+
+body {
+	background-image: url('./sky_background.jpg'); /* Ruta de la imagen */
+	background-size: cover; /* Ajusta la imagen para cubrir toda la pantalla */
+	background-position: center; /* Centra la imagen */
+	background-repeat: no-repeat; /* Evita que la imagen se repita */
+	height: 100vh; /* Asegura que ocupe toda la pantalla */
+	margin: 0; /* Elimina márgenes */
+	padding: 0; /* Elimina padding */
+	display: flex;
+	justify-content: center; /* Centrar horizontalmente */
+	align-items: center; /* Centrar verticalmente */
+	margin: 0; /* Evita márgenes por defecto */
+	color: #FFFFFF;
+	font-family: 'Roboto', sans-serif;
+}
+.mainCard{
+	border: 1px solid #0f6ea7B3;
+	border-radius: 15px; /* Bordes redondeados */
+	width: 802.5px;	
+	height: 300px;
+	margin: 40px 0;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+	background-color: #0f6ea7B3;
+	backdrop-filter: blur(10px);
+}
+
+.mainContent{
+	margin: 25px;
+}
+
+
+#weatherInfo{
+	display: flex;
+	gap: 325px;
+	flex-wrap: wrap; /* Permite que las tarjetas se acomoden */
+}
+
+
+#weatherIcon{
+	width: 200px; 
+	height: 200px;
+}
+
+
+
+.cards{
+	display: flex;
+	gap: 75px;
+	flex-wrap: wrap; /* Permite que las tarjetas se acomoden */
+
+}
+
+.card{
+	border: 1px solid #0f6ea7B3;
+	border-radius: 15px; /* Bordes redondeados */
+	width: 215px; /* Tamaño cuadrado */
+	height: 215px;
+	box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+	background-color: #0f6ea7B3;
+	backdrop-filter: blur(10px);
+}
+
+.content{
+	margin: 25px;;
+}
+
+#location{
+	width: 500px; 
+	height: 25px;
+	font-size: 245%;
+}
+
+#temp{
+	font-size: 275%;
+}
+
+#weatherData h3{
+	font-size: 125%;
+}
+
+#weatherData{
+	text-align: right;
+}
+
+#weatherDesc{
+	color: #A7D8F0;
+}
+
+.card h2{
+	font-size: 150%;
+}
+
+.card h3{
+	font-size: 240%;
+}
+
+

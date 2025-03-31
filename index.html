@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Web Clima
+    </title>
+    <script type="text/javascript", src="./main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+  </head>
+  <body>
+
+    <header>
+      <nav class="navbar">
+        <div class="nav-content">
+          <div id="searchCity">
+            <input type="text" id="cityInput" placeholder="City">
+            <button onclick="searchCity()" id="searchButton">
+              <i class="fas fa-search"></i> 
+            </button>
+          </div>
+          <p id="nav-location"></p>
+        </div>
+    </nav>
+    </header>
+    
+    <main>
+
+      <div class="mainCard">
+        <div class="mainContent">
+
+          <h1 id="location"></h1>
+
+          <div id= "weatherInfo"> 
+
+            <img src="./weatherIcons/day.svg" id="weatherIcon">
+
+            <div id="weatherData">
+              <h2 id="temp"></h2>
+              <h3 id="weatherDesc"></h3>
+              <h3 id="maxMin"></h3>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="cards">
+         <div class="card">
+          <div class="content">
+            <h2>Feels like:</h2>
+            <h3 id="feelsLike"> </h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <h2>Wind:</h2>
+            <h3 id="wind"> </h3>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <h2>Humidity:</h2>
+            <h3 id="humidity"> </h3>
+          </div>
+      </div>
+       
+
+      </div>
+      
+    </main>
+    <footer>
+      
+    </footer>
+  </body>
+</html>
