@@ -1,6 +1,22 @@
 const key = "860709e742a4d58de25888faf155424d"; // Clave de API
 const defaultCity = "Los Angeles"; // Ciudad por defecto
 
+const weatherIcons = {
+    "Clear" : "/clear_sky.svg",
+    "Clouds" : "/clouds.svg",
+    "Drizzle" : "/shower_rain.svg",
+    "Rain" : "/rain.svg",
+    "Thunderstorm" : "/thunderstorm.svg",
+    "Snow": "/snow.svg",
+}
+
+function getWeatherIcon(weather){
+    let icon = "./weatherIcons" + weatherIcons[weather];
+    return icon;
+}
+
+
+
 // Función para obtener y mostrar el clima
 function getWeather(city = defaultCity) {
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${key}`;
@@ -24,8 +40,11 @@ function getWeather(city = defaultCity) {
             document.getElementById("temp").innerText = `${temperature} °C`;
 
             let weatherDesc = data.weather[0].description;
+            let weatherMain = data.weather[0].main;
             weatherDesc = weatherDesc.charAt(0).toUpperCase() + weatherDesc.slice(1);
             document.getElementById("weatherDesc").innerText = `${weatherDesc}`;
+
+            document.getElementById("weatherIcon").src = getWeatherIcon(weatherMain);
 
             let tempMax = (data.main.temp_max - 273.15).toFixed(0);
             let tempMin = (data.main.temp_min - 273.15).toFixed(0);
