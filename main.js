@@ -2,15 +2,21 @@ const key = "860709e742a4d58de25888faf155424d"; // Clave de API
 const defaultCity = "Los Angeles"; // Ciudad por defecto
 
 const weatherIcons = {
-    "Clear" : "/clear_sky.svg",
-    "Clouds" : "/clouds.svg",
-    "Drizzle" : "/shower_rain.svg",
+    "Clear" : "/clear_sky_day.svg",
+    "Clouds" : "/clouds_day.svg",
+    "Drizzle" : "/drizzle.svg",
     "Rain" : "/rain.svg",
     "Thunderstorm" : "/thunderstorm.svg",
     "Snow": "/snow.svg",
 }
 
 function getWeatherIcon(weather){
+
+    if (!(weather in weatherIcons)) {
+        let icon = "./weatherIcons/atmosphere.svg";
+        return icon;
+    }
+
     let icon = "./weatherIcons" + weatherIcons[weather];
     return icon;
 }
